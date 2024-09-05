@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="PersistenceApp" transaction-type="RESOURCE_LOCAL">
+        <class>entidades.Cliente</class>
+        <class>entidades.Domicilio</class>
+        <class>entidades.Articulo</class>
+        <class>entidades.Factura</class>
+        <class>entidades.DetalleFactura</class>
+        <class>entidades.Categoria</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <!--
+            update: Permite generar tablas automaticamente
+            drop: eliminar todas las tablas de bd
+            -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="javax.persistence.schema-generation.database.action" value="update"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
