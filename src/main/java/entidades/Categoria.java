@@ -1,6 +1,7 @@
 package entidades;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,6 +16,7 @@ import java.util.List;
 @ToString
 @Getter
 @Setter
+@Audited
 public class Categoria implements Serializable {
 
     @Id

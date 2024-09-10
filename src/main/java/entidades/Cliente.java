@@ -1,6 +1,7 @@
 package entidades;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,6 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Audited
 //Para hacer persistencia tiene que heredar serializable
 public class Cliente implements Serializable {
     //Atributo unico. Clave primaria de la tabla

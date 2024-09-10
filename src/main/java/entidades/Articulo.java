@@ -1,6 +1,7 @@
 package entidades;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.List;
 @ToString
 @Getter
 @Setter
+@Audited
 public class Articulo {
 
     @Id

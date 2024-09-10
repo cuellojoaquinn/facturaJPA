@@ -10,6 +10,8 @@
         <class>entidades.Factura</class>
         <class>entidades.DetalleFactura</class>
         <class>entidades.Categoria</class>
+        <class>audit.Revision</class>
+        <class>config.CustomRevisionListener</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
@@ -21,6 +23,7 @@
             -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             <property name="javax.persistence.schema-generation.database.action" value="update"/>
+
         </properties>
     </persistence-unit>
 

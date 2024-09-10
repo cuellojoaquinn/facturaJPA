@@ -1,6 +1,7 @@
 package entidades;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serial;
@@ -14,6 +15,7 @@ import java.io.Serializable;
 @ToString
 @Getter
 @Setter
+@Audited
 public class DetalleFactura implements Serializable {
 
     @Id
